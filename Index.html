@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicóloga - Acompanhamento e Bem-Estar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom cream theme */
+        :root {
+            --cream: #EFE7DA;
+            --teal: #B29079;
+            --brown: #C1B6A4;
+        }
+        body {
+            background-color: var(--cream);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, var(--cream) 50%, #B29079 50%);
+        }
+        .quote-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--teal);
+        }
+        /* Smooth transitions */
+        img {
+            transition: opacity 0.3s ease;
+        }
+        img:onerror {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold style=color: var(--teal)">Psicóloga | Paloma De Paula dos Santos</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#hero" class="text-brown font-bold hover:text-amber-600 transition">Início</a></li>
+                <li><a href="#about" class="text-brown font-bold hover:text-amber-600 transition">Sobre</a></li>
+                <li><a href="#services" class="text-brown font-bold hover:text-amber-600 transition">Serviços</a></li>
+                <li><a href="#contact" class="text-brown font-bold hover:text-amber-600 transition">Contato</a></li>
+            </ul>
+            <button class="md:hidden text-amber-600" id="menu-toggle">☰</button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white pb-4 px-4 hidden">
+            <ul class="space-y-2">
+                <li><a href="#hero" class="block text-brown hover:text-amber-600">Início</a></li>
+                <li><a href="#about" class="block text-brown hover:text-amber-600">Sobre</a></li>
+                <li><a href="#services" class="block text-brown hover:text-amber-600">Serviços</a></li>
+                <li><a href="#contact" class="block text-brown hover:text-amber-600">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg py-20 relative">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-4xl font-semibold text-brown mb-4">Um espaço para você se conhecer e se cuidar.</h2>
+            <div class="quote-container max-w-2xl mx-auto mt-8 p-6 rounded-lg">
+                <p id="quote" class="text-lg md:text-xl italic text-gray-700">"A mente que se abre a uma nova ideia nunca retorna ao seu tamanho original." - Albert Einstein</p>
+                <button id="next-quote" class="mt-4 bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700 transition">Próxima Citação</button>
+            </div>
+            <img src="Imagens/sala.png" alt="Sala de terapia acolhedora com poltrona confortável, plantas verdes, janela com luz natural suave e mesa com cadernos em tom creme, estilo moderno e calmo para prática de psicologia" class="mt-6 mx-auto rounded-lg shadow-lg w-1/2 h-auto" />
+            <a href="#contact" class="inline-block mt-8 bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition">Agende uma Sessão</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-brown text-center mb-8">Sobre Mim</h2>
+            <div class="md:flex md:items-center">
+                <img src="Imagens/paloma-perfil.png" alt="Profissional psicóloga com expressão amigável, vestindo blazer em tom neutro, fundo em gradiente creme, retrato profissional em estilo calmo e confiável" class="md:w-1/3 mb-6 md:mb-0 rounded-lg shadow-md" />
+                <div class="md:ml-8 md:w-2/3">
+                    <p class="text-xl leading-relaxed mb-4">Olá, sou psicóloga e apaixonada por acompanhar pessoas em seus processos de transformação. Minha jornada começou como professora da educação infantil, onde aprendi sobre a importância da escuta, do cuidado e da sensibilidade nas primeiras etapas da vida.
+Com o tempo, migrei para a área de Recursos Humanos, onde aprofundei meu olhar sobre as relações interpessoais, desenvolvimento humano e os desafios do ambiente de trabalho.</p>
+                    <p class="text-xl leading-relaxed">Hoje, atuo na psicologia clínica com a mesma paixão: oferecer um espaço seguro, acolhedor e transformador, unindo minha experiência em diferentes áreas para compreender o ser humano em toda a sua complexidade.
+Tenho especialização em terapia cognitivo-comportamental, com foco em ansiedade, depressão e transtornos relacionais, sempre buscando uma abordagem integral que promove equilíbrio, bem-estar e autoconhecimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 hero-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-brown text-center mb-8">Meus Serviços</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="Imagens/terapia-individual.png" alt="Ícone representativo de terapia individual, cadeira acolhedora com livros de psicologia empilhados em fundo creme, estilo minimalista e calmo" class="mb-4 rounded" />
+                    <h3 class="text-xl font-semibold text-amber-600 mb-2">Terapia Individual</h3>
+                    <p>Jornada de autodescoberta e crescimento pessoal. Ofereço um espaço seguro e acolhedor para você explorar desafios, fortalecer a saúde mental e alcançar seu bem-estar.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="Imagens/psicoeducação.png" alt="Duas generic pessoas em conversa, ambiente calmo com plantas, representando terapia de casal, tons creme e verde" class="mb-4 rounded" />
+                    <h3 class="text-xl font-semibold text-amber-600 mb-2">Terapia de Casal</h3>
+                    <p>Construindo pontes no relacionamento. Ajudo casais a navegar por desafios, resolver desentendimentos e redescobrir a parceria, cultivando uma relação de apoio mútuo.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="Imagens/terapiadecasal.png" alt="Grupo de pessoas sentadas em círculo em ambiente acolhedor, elementos de psicoeducação como quadro com anotações em tons suaves crem" class="mb-4 rounded" />
+                    <h3 class="text-xl font-semibold text-amber-600 mb-2">Psicoeducação</h3>
+                    <p>Capacitação para o bem-estar. Aprenda sobre a saúde mental de forma prática e interativa em workshops e palestras focadas no desenvolvimento de habilidades e estratégias de enfrentamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-brown mb-8">Depoimentos</h2>
+            <div class="quote-container max-w-2xl mx-auto p-6 rounded-lg">
+                <p class="text-lg italic text-gray-700 mb-4">"A terapia me ajudou a encontrar paz interior. Sou grata pela orientação profissional e empática."</p>
+                <p class="text-sm text-amber-600">- Cliente Anônimo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 hero-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-brown text-center mb-8">Entre em Contato</h2>
+            <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md" onsubmit="return enviarContato()">
+                <div class="mb-4">
+                    <label class="block text-brown text-sm font-bold mb-2" for="nome">Nome</label>
+                    <input type="text" id="nome" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-amber-600" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-brown text-sm font-bold mb-2" for="email">E-mail</label>
+                    <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-amber-600" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-brown text-sm font-bold mb-2" for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-amber-600" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-amber-600 text-white py-2 rounded hover:bg-amber-700 transition">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown text-amber-600 py-8">
+        <div class="container mx-auto px-4  text-center">
+            <p>© 2025 Psicóloga Paloma de Paula Dos Santos. Todos os direitos reservados.</p>
+            <p class="mt-2">Contato: ps.palomasantos@gmail.com | (21) 98295-3546</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Quote rotator
+        const quotes = [
+            "\"A mente que se abre a uma nova ideia nunca retorna ao seu tamanho original.\" - Albert Einstein",
+            "\"A alegria está na jornada, não no destino.\" - Paulo Coelho",
+            "\"Você não precisa controlar seus pensamentos, você precisa apenas parar de deixar que eles controlem você.\" - Dan Millman",
+            "\"A mudança é o resultado final do verdadeiro aprendizado.\" - Leo Buscaglia"
+        ];
+        let quoteIndex = 0;
+        const quoteElement = document.getElementById('quote');
+        document.getElementById('next-quote').addEventListener('click', function() {
+            quoteIndex = (quoteIndex + 1) % quotes.length;
+            quoteElement.textContent = quotes[quoteIndex];
+        });
+
+        // Form handling (basic alert for demo)
+        function enviarContato() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            if(!nome || !email || !mensagem) {
+                alert('Por favor, preencha todos os campos.');
+                return false;
+            }
+            alert(`Obrigado, ${nome}! Sua mensagem foi enviada. Entrarei em contato em breve.`);
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('mensagem').value = '';
+            return false;
+        }
+    </script>
+</body>
+</html>
+</content>
+</create_file>
